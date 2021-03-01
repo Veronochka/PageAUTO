@@ -1,92 +1,102 @@
-body {background: url(images/lukoshko.jpg); 
+body {
+    background: url(images/lukoshko.jpg);
     opacity: 0.9;
 }
+
+.block {
+    color: azure;
+    font-size: 20px
+}
+
 form {
     width: 300px;
     margin: 60px auto 30px;
     padding: 10px;
-    position: relative; /*размер и расположение поля ввода+кнопка*/
+    /*размер и расположение поля ввода+кнопка*/
+    position: relative;
 }
+
 .fieldcontainer input[id=inputemail],
 .fieldcontainer input[id=inputpassword] {
     width: 100%;
-    padding: 12px 4px 12px 10px; /*размер полей*/
-    margin-bottom: 10px;/*размер и расположение полей*/
-  /*стиль оформления полей*/
-    border: 1px solid #4e3043;
-    border: 2px solid rgba(78,48,67, 0.8); /*толщина,цвет рамки полей*/
-    background: rgba(155, 170, 145, 0.8); /*заливка полей*/
-    border-radius: 5px; /*степень скругления углов рамок полей*/
-    box-shadow:
-        0 1px 0 rgba(255,255,255,0.2),
-        inset 0 2px 1px rgba(0,0,0,0.1); /*тень внутри поля*/
+    /*размер полей*/
+    padding: 12px 4px 12px 10px;
+    /*размер и расположение полей*/
+    margin-bottom: 10px;
+    /*стиль оформления полей*/
+    border: 1px solid #f9f9fc;
+    /*толщина,цвет рамки полей*/
+    border: 2px solid rgba(254, 255, 255, 0.8);
+    /*заливка полей*/
+    background: rgba(205, 203, 238, 0.8);
+    /*степень скругления углов рамок полей*/
+    border-radius: 5px;
+    /*тень внутри поля*/
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 2px 1px rgba(0, 0, 0, 0.1);
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -ms-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out; /*анамированные переходы*/
- 
-    /* Font styles */
-    font-family: 'Raleway', 'Lato', Arial, cursive;
-    color: rgb(102, 47, 68);
-    font-size: 20px;
- 
-}
-form input[id=submit] {
-   
-    width: 106%;
-    padding: 8px 5px; /*размер, расположение кнопки*/
-     
-    /* Styles */
-    background: linear-gradient(rgba(99,64,86,0.9), rgba(76,49,65,0.7));  
-    border-radius: 5px;
-    border: 1px solid #4e3043;
-    box-shadow:
-        inset 0 1px rgba(219, 35, 59, 0.4),
-        0 2px 1px rgba(192, 18, 56, 0.7);
-    cursor: pointer;
+    /*анамированные переходы*/
     transition: all 0.3s ease-out;
- 
-    /* Font styles */
-    color: rgb(255, 255, 255);
-    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    /*начертание содержимого ячеек*/
+    color: rgba(3, 0, 1, 1);
     font-size: 16px;
     font-weight: bold;
     font-family: 'Raleway', 'Lato', Arial, sans-serif;
 }
-footer {
-    position: fixed; /*положение фиксировано*/
-    left: 0; bottom: 0; /*левый нижний угол*/
-    padding: 30px; /*ширина футера*/
-    background: #a3f1d3; /*цвет фона*/
-    color: rgb(16, 13, 233); /*цвет текста*/
-    width: 100%; /*ширина слоя- по всей странице*/
-   }
 
-   /* Наш стиль для невалидных полей */
-input:invalid{
-    border-color: #900;
-    background-color: #FDD;
-  }
-  
-  input:focus:invalid {
-    outline: none;
-  }
-  
-  /* Это стиль для сообщений об ошибке */
-  span.error {
-    width  : 100%;
+.fieldcontainer input[id=inputemail]::placeholder,
+.fieldcontainer input[id=inputpassword]::placeholder {
+    color: rgb(12, 6, 39);
+}
+
+form input[id=submit] {
+    width: 106%;
+    /*размер, расположение кнопки*/
+    padding: 8px 5px;
+    /*оформление кнопки*/
+    background: linear-gradient(rgba(1, 56, 13, 0.9), rgba(3, 136, 36, 0.7));
+    border-radius: 5px;
+    border: 1px solid #098505;
+    box-shadow: inset 0 1px rgba(78, 197, 127, 0.4), 0 2px 1px rgba(4, 80, 10, 0.7);
+    cursor: pointer;
+    /*начертание названия кнопки*/
+    transition: all 0.3s ease-out;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+}
+
+footer {
+    /*параметры футера*/
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    background: #9db2eb;
+    width: 100%;
+    /*параметры текста*/
+    color: rgb(3, 0, 7);
+    font-size: 16px;
+    font-weight: bolder;
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+}
+
+span.error {
+    /*формат сообщений об ошибке в полях ввода*/
+    width: 100%;
     padding: 0;
-  
-    font-size: 80%;
-    color: white;
-    background-color: #900;
+    background-color: rgb(250, 0, 0);
     border-radius: 0 0 5px 5px;
-  
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-  }
-  
-  .error.active {
+    font-size: 100%;
+    color: rgb(252, 249, 249);
+}
+
+span.error.active {
     padding: 0.3em;
-  }
+}

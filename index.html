@@ -2,48 +2,61 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
     <!--вид кодировки для документа-->
-    <title>Log in</title>
+    <meta charset="utf-8">
     <!--название страницы для вкладки, поисковика-->
-    <link rel="icon" href="images/favicon-berry.png">
+    <title>Log in</title>
     <!--установка фавикона для страницы-->
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" href="images/favicon-berry.png">
     <!--использовать стили из указанного файла-->
-
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body>
-    <!--[if IE]>
-	aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    <!--сообщение для загрузки до IE9 включительно-->
+    <!--[if IE]> 
+    <div class="block">
+        Ваш браузер не поддерживается. Скачать 
+    <a href = "https://www.microsoft.com/ru-ru/edge"><img src="images/Microsoft-Edge.jpg" width="35" 
+   height="35" border="0" alt="Microsoft Edge"></a>,
+    <a href = "https://www.google.ru/chrome/"><img src="images/google-chrome.jpg" width="35" 
+   height="35" border="0" alt="Google Chrome"></a>,
+    <a href = "https://www.mozilla.org/ru/firefox/new/"><img src="images/mozilla_firefox.png" width="35" 
+   height="35" border="0" alt="Mozilla Firefox"></a>
+    </div>
     <![endif]-->
+    <!--ЕСЛИ ИСПОЛЬЗУЕТСЯ БРАУЗЕР НЕ IE-->
     <!--[if !IE]><!-->
+    <!--отмена автоматической проверки полей-->
     <form novalidate>
+        <!--выделение в класс области с полями ввода почты и пароля-->
         <div class="fieldcontainer">
             <p>
+                <!--поле ввода логина с плейсхолдером email-->
                 <input id="inputemail" type="text" name="login" placeholder="Email" />
-                <!--создание поля ввода логина с плейсхолдером email-->
+                <!--сообщение об ошибке-->
                 <span id="inputemailerror" class="error"></span>
             </p>
             <p>
+                <!--поле ввода пароля с плейсхолдером password-->
                 <input id="inputpassword" type="password" name='password' placeholder="Password" />
-                <!--создание поля ввода пароля с плейсхолдером password-->
+                <!--сообщение об ошибке-->
                 <span id="inputpassworderror" class="error"></span>
             </p>
         </div>
         <p>
-            <input id="submit" type="submit" name="submit" value="Go!" />
             <!--создание кнопки-->
+            <input id="submit" type="submit" name="submit" value="Go!" />
         </p>
     </form>
+    <!--футер с содержимым: время, день недели, дата-->
     <footer>
         <span id="clock">
         </span>
     </footer>
-    <!--футер с содержимым: время, день недели, дата-->
     <!--<![endif]-->
 </body>
-<!--подключение файла с кодом после рендеринга всей страницы-->
+<!--подключение файла с js после рендеринга всей страницы-->
 <script src="script.js"></script>
 
 </html>
