@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--вид кодировки для документа-->
+    <title>Log in</title>
+    <!--название страницы для вкладки, поисковика-->
+    <link rel="icon" href="images/favicon-berry.png">
+    <!--установка фавикона для страницы-->
+    <link rel="stylesheet" href="stylesheet.css">
+    <!--использовать стили из указанного файла-->
+
+</head>
+
+<body>
+    <!--[if IE]>
+	aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    <![endif]-->
+    <!--[if !IE]><!-->
+    <form novalidate>
+        <div class="fieldcontainer">
+            <p>
+                <input id="inputemail" type="text" name="login" placeholder="Email" />
+                <!--создание поля ввода логина с плейсхолдером email-->
+                <span id="inputemailerror" class="error"></span>
+            </p>
+            <p>
+                <input id="inputpassword" type="password" name='password' placeholder="Password" />
+                <!--создание поля ввода пароля с плейсхолдером password-->
+                <span id="inputpassworderror" class="error"></span>
+            </p>
+        </div>
+        <p>
+            <input id="submit" type="submit" name="submit" value="Go!" />
+            <!--создание кнопки-->
+        </p>
+    </form>
+    <footer>
+        <span id="clock">
+        </span>
+    </footer>
+    <!--футер с содержимым: время, день недели, дата-->
+    <!--<![endif]-->
+</body>
+<!--подключение файла с кодом после рендеринга всей страницы-->
+<script src="script.js"></script>
+
+</html>
