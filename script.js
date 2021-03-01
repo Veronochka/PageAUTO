@@ -27,12 +27,13 @@
 }());
 
 /*обработка ошибок в полях ввода*/
+/*объявление переменных*/
 let form = document.getElementsByTagName('form')[0];
 let email = document.getElementById('inputemail');
 let password = document.getElementById('inputpassword');
 let emailerror = document.getElementById('inputemailerror');
 let passworderror = document.getElementById('inputpassworderror');
-
+/*добавление обработчиков событий*/
 email.addEventListener("input", function(event) {
     validateEmail();
 }, false);
@@ -46,30 +47,7 @@ form.addEventListener("submit", function(event) {
     validateEmail();
     event.preventDefault();
 }, false);
-
-// 
-function validatePassword() {
-    if (password.value.length < 6) {
-        passworderror.innerHTML = "Должен содержать не менее 6 символов";
-        passworderror.className = "error active";
-    } else if (!(/[a-z]+/).test(password.value)) {
-        passworderror.innerHTML = "Должен содержать прописные символы";
-        passworderror.className = "error active";
-    } else if (!(/[A-Z]+/).test(password.value)) {
-        passworderror.innerHTML = "Должен содержать строчные символы";
-        passworderror.className = "error active";
-    } else if (!(/[0-9]+/).test(password.value)) {
-        passworderror.innerHTML = "Должен содержать цифры";
-        passworderror.className = "error active";
-    } else if (!(/\W/).test(password.value)) {
-        passworderror.innerHTML = "Должен содержать спецсимволы";
-        passworderror.className = "error active";
-    } else {
-        passworderror.innerHTML = "";
-        passworderror.className = "error";
-    }
-}
-
+/*обработка ошибок в поле ввода почты*/
 function validateEmail() {
     if (email.value) {
         emailerror.innerHTML = "";
@@ -77,5 +55,27 @@ function validateEmail() {
     } else {
         emailerror.innerHTML = "Введите адрес электронной почты";
         emailerror.className = "error active";
+    }
+}
+/*обработка ошибок в поле ввода пароля*/
+function validatePassword() {
+    if (password.value.length < 6) {
+        passworderror.innerHTML = "Пароль должен содержать не менее 6 символов";
+        passworderror.className = "error active";
+    } else if (!(/[a-z]+/).test(password.value)) {
+        passworderror.innerHTML = "Пароль должен содержать прописные символы";
+        passworderror.className = "error active";
+    } else if (!(/[A-Z]+/).test(password.value)) {
+        passworderror.innerHTML = "Пароль должен содержать строчные символы";
+        passworderror.className = "error active";
+    } else if (!(/[0-9]+/).test(password.value)) {
+        passworderror.innerHTML = "Пароль должен содержать цифры";
+        passworderror.className = "error active";
+    } else if (!(/\W/).test(password.value)) {
+        passworderror.innerHTML = "Пароль должен содержать спецсимволы";
+        passworderror.className = "error active";
+    } else {
+        passworderror.innerHTML = "";
+        passworderror.className = "error";
     }
 }

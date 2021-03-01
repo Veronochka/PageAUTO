@@ -87,16 +87,17 @@ footer {
 
 span.error {
     /*формат сообщений об ошибке в полях ввода*/
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
     width: 100%;
     padding: 0;
     background-color: rgb(250, 0, 0);
     border-radius: 0 0 5px 5px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-size: 100%;
+    font-size: 13px;
     color: rgb(252, 249, 249);
 }
 
 span.error.active {
-    padding: 0.3em;
+    padding: 0.2em;
 }
